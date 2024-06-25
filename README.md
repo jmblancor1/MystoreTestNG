@@ -1,0 +1,2 @@
+# MystoreTestNG
+automatizacion con testNG 
