@@ -20,18 +20,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "jmblancor1"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jmblancor1&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/jmblancor1/MystoreTestNG.git",
-    "accountId": "9b0a8828-2088-4598-b3fe-4ac2dcff5f2c"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/jmblancor1/MystoreTestNG.git&quot;,
+    &quot;accountId&quot;: &quot;9b0a8828-2088-4598-b3fe-4ac2dcff5f2c&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$MAVEN_REPOSITORY$/org/testng/testng/7.10.1/testng-7.10.1.jar!/org/testng/SuiteRunner.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$MAVEN_REPOSITORY$/org/testng/testng/7.10.1/testng-7.10.1.jar!/org/testng/SuiteRunnerWorker.class" root0="SKIP_INSPECTION" />
@@ -53,29 +53,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Cucumber Java.Feature: login.executor": "Run",
-    "Cucumber Java.Scenario: Check login is successful with valid credentials.executor": "Run",
-    "Maven.AutomatizacionTestGN [clean].executor": "Run",
-    "Maven.AutomatizacionTestGN [compile].executor": "Run",
-    "Maven.AutomatizacionTestGN [test].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TestNG.<default>.executor": "Run",
-    "TestNG.SeleniumTest.executor": "Run",
-    "git-widget-placeholder": "cucumber-joyce",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/lordm/IdeaProjects/AutomatizacionTestGN/src/main/java/Estudio/Main.java",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Cucumber Java.Feature: login.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Check login is successful with valid credentials.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.AutomatizacionTestGN [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.AutomatizacionTestGN [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.AutomatizacionTestGN [test].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TestNG.&lt;default&gt;.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.SeleniumTest.executor&quot;: &quot;Run&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/lordm/IdeaProjects/AutomatizacionTestGN/src/main/java/Estudio/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="TestNG.&lt;default&gt;">
     <configuration name="Feature: login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
@@ -171,7 +170,7 @@
       <workItem from="1721319722630" duration="133000" />
       <workItem from="1721396923926" duration="2000" />
       <workItem from="1721575464756" duration="7969000" />
-      <workItem from="1721666435282" duration="8134000" />
+      <workItem from="1721666435282" duration="8493000" />
     </task>
     <servers />
   </component>
