@@ -9,8 +9,5 @@
         <module name="AutomatizacionTestGN" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="AutomatizacionTestGN" target="11" />
-    </bytecodeTargetLevel>
   </component>
 </project>
