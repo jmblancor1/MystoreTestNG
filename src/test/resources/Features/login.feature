@@ -1,7 +1,11 @@
 Feature: Login page Automation of MyStore website
-Scenario: Check login is successful with valid credentials
+Scenario Outline: Check login is successful with valid credentials
 Given User is on login page
-When User enters valid username and password
-  When Clicks on Login Button
+When User enters valid "<username>" and "<password>"
+  And Clicks on Login Button
 Then User is navigated to Home Page
-  Then Close the browser
+  And Close the browser
+
+Examples:
+  | username | password |
+  | jmbr2004@gmail.com | Joyce.1984 |
