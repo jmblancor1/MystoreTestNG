@@ -9,20 +9,17 @@ public class SeleniumTest {
     @BeforeTest
     void Setup(){
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\test\\resources\\drivers\\chrome\\version_115\\chromedriver.exe");
-
-
         driver.get("http://www.testingyes.com/onlineshop/");
 
     }
     @AfterTest
     void TearDown(){
-
         driver.close();
         driver.quit();
     }
+
     @Test
     void test(){
-
         String title = driver.getTitle();
         System.out.println(title);
 
