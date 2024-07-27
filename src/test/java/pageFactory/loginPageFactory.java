@@ -35,6 +35,7 @@ public class loginPageFactory {
     public void clickSignin() {
         lbl_Signin.click();
     }
+
     public loginPageFactory(WebDriver driver)
     {
         this.driver=driver;
