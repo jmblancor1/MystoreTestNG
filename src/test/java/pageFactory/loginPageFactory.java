@@ -1,5 +1,6 @@
 package pageFactory;
 
+import Utilities.BaseClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,7 +11,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class loginPageFactory {
+public class loginPageFactory extends BaseClass {
+
+    public loginPageFactory(WebDriver driver, WebDriverWait wait) {
+        super(driver, wait);
+        PageFactory.initElements(driver, this);
+    }
+
     WebDriver driver;
     @FindBy(name = "email")
     WebElement txt_username;
@@ -36,13 +43,5 @@ public class loginPageFactory {
         lbl_Signin.click();
     }
 
-    public loginPageFactory(WebDriver driver)
-    {
-        this.driver=driver;
-        PageFactory.initElements(driver, this);
-    }
-//    public void validateLogo() {
-//        lbl_logo.isDisplayed();
-//    }
 
 }

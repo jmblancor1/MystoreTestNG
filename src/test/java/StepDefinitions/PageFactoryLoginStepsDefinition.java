@@ -1,6 +1,8 @@
 package StepDefinitions;
 
-import PageObject.LoginPage;
+import Utilities.PropertiesReader;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import pageFactory.loginPageFactory;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -12,18 +14,23 @@ import pageFactory.homePageFactory;
 import pageFactory.loginPageFactory;
 
 public class PageFactoryLoginStepsDefinition {
-    WebDriver driver;
+
+    private WebDriver driver = Hooks.driver;
+    private WebDriverWait wait;
+
+    public PageFactoryLoginStepsDefinition() throws Exception {
+
+        PropertiesReader propertiesReader = new PropertiesReader();
+        this.wait = new WebDriverWait(driver, propertiesReader.getTimeout());
+    }
+
+
     loginPageFactory login;
     homePageFactory home;
+
+
     @Given("User is on login page")
     public void user_is_on_login_page() {
-        WebDriverManager.chromedriver().setup();
-        //System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\test\\resources\\drivers\\chrome\\version_115\\chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        //driver.manage().deleteAllCookies();
-        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        driver.get("http://www.testingyes.com/onlineshop/");
         login = new loginPageFactory(driver);
         login.clickSignin();
 
