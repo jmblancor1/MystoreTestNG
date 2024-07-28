@@ -4,6 +4,7 @@ import Utilities.BaseClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -20,20 +21,62 @@ public class loginPageFactory extends BaseClass {
 
     WebDriver driver;
     @FindBy(name = "email")
-    WebElement txt_username;
+    @CacheLookup
+    private WebElement txt_username;
+
     @FindBy(name = "password")
-    WebElement txt_password;
+    @CacheLookup
+    private WebElement txt_password;
+
     @FindBy(xpath = "//div[@class='user-info']//a[@href='http://www.testingyes.com/onlineshop/my-account']")
-    WebElement lbl_Signin;
+    @CacheLookup
+    private WebElement lbl_Signin;
+
     @FindBy(id = "submit-login")
-    WebElement btn_login;
+    @CacheLookup
+    private WebElement btn_login;
+    @FindBy(xpath = "//h1[normalize-space()='Log in to your account']")
+    @CacheLookup
+    private WebElement lbl_titLogin;
+
     @FindBy(xpath = "//img[@alt='My e-commerce']")
-    WebElement lbl_logo;
+    @CacheLookup
+    private WebElement lbl_logo;
+    @FindBy(xpath = "//a[normalize-space()='Forgot your password?']")
+    @CacheLookup
+    private WebElement lbl_forgotPassword;
+    @FindBy(xpath = "//a[normalize-space()='No account? Create one here']")
+    @CacheLookup
+    private WebElement lbl_createAccount;
+
+
+
     public void enterUsername(String username) {
+        WaitUntilElementVisible(txt_username);
+        txt_username.isEnabled();
+        txt_username.clear();
         txt_username.sendKeys(username);
     }
     public void enterPassword(String password) {
+        WaitUntilElementVisible(txt_password);
+        txt_password.isEnabled();
         txt_password.sendKeys(password);
+    }
+    public boolean loginPageisDisplayed(){
+        WaitUntilElementVisible(lbl_titLogin);
+        lbl_titLogin.isDisplayed();
+        WaitUntilElementVisible(txt_username);
+        txt_username.isDisplayed();
+        WaitUntilElementVisible(txt_password);
+        txt_password.isDisplayed();
+        WaitUntilElementVisible(btn_login);
+        btn_login.isDisplayed();
+        WaitUntilElementVisible(lbl_forgotPassword);
+        lbl_forgotPassword.isDisplayed();
+        WaitUntilElementVisible(lbl_createAccount);
+        lbl_createAccount.isDisplayed();
+
+        return true;
     }
     public void clickLogin() {
         btn_login.click();
