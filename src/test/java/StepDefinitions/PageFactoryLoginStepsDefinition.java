@@ -2,6 +2,7 @@ package StepDefinitions;
 
 import Utilities.PropertiesReader;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import pageFactory.loginPageFactory;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -25,7 +26,11 @@ public class PageFactoryLoginStepsDefinition {
 
     public PageFactoryLoginStepsDefinition() throws Exception {
         PropertiesReader propertiesReader = new PropertiesReader();
+<<<<<<< HEAD
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(propertiesReader.getTimeout()));
+=======
+        this.wait = new WebDriverWait(driver,propertiesReader.getTimeout());
+>>>>>>> 9bf25ddc2f819aa4a88f4cc23634437534af7003
     }
 
 
@@ -37,6 +42,10 @@ public class PageFactoryLoginStepsDefinition {
     @Given("User is on login page")
     public void user_is_on_login_page() {
         login = new loginPageFactory(driver,wait);
+<<<<<<< HEAD
+=======
+        login.loginPageisDisplayed();
+>>>>>>> 9bf25ddc2f819aa4a88f4cc23634437534af7003
         login.clickSignin();
 
     }
@@ -44,22 +53,25 @@ public class PageFactoryLoginStepsDefinition {
     @When("User enters valid {string} and {string}")
     public void user_enters_valid_and(String username, String password) throws InterruptedException {
 
-        //login = new loginPageFactory(driver);
+        loginPageFactory login = new loginPageFactory(driver,wait);
+        login.loginPageisDisplayed();
         login.enterUsername(username);
         login.enterPassword(password);
+
     }
 
     @And("Clicks on Login Button")
     public void clicks_on_login_button() {
-
+        loginPageFactory login = new loginPageFactory(driver,wait);
         login.clickLogin();
     }
 
     @Then("User is navigated to Home Page")
     public void user_is_navigated_to_home_page() {
-        home=new homePageFactory(driver);
+        homePageFactory home=new homePageFactory(driver,wait);
         home.validateCar();
-        System.out.println("test factory");
+        Assert.assertTrue(home.homePageIsDisplayed());
+
     }
 
     @And("Close the browser")
