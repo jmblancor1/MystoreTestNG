@@ -1,5 +1,7 @@
 package Utilities;
 
+import io.cucumber.messages.types.Duration;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
@@ -17,8 +19,16 @@ public class PropertiesReader {
         return properties.getProperty(key);
     }
 
+
     public Long getTimeout() throws Exception {
         String timeout = PropertiesReader.getValue("timeout");
         return Long.parseLong(timeout);
     }
+
+
+
+
+
+
+
 }

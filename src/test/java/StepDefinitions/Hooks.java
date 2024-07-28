@@ -36,11 +36,10 @@ public class Hooks {
 
     @AfterTest
     public void embedScreenshot(Scenario scenario) {
-
         if(scenario.isFailed()) {
             try {
                 byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-                scenario.embed(screenshot, "image/png");
+                scenario.attach(screenshot, "image/png", "Screenshot");
             } catch (WebDriverException noSupportScreenshot) {
                 System.err.println(noSupportScreenshot.getMessage());
             }

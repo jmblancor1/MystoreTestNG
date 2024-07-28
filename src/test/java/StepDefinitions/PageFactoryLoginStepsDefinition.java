@@ -13,16 +13,21 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import pageFactory.homePageFactory;
 import pageFactory.loginPageFactory;
 
+import java.time.Duration;
+
 public class PageFactoryLoginStepsDefinition {
 
     private WebDriver driver = Hooks.driver;
     private WebDriverWait wait;
 
-    public PageFactoryLoginStepsDefinition() throws Exception {
 
+
+
+    public PageFactoryLoginStepsDefinition() throws Exception {
         PropertiesReader propertiesReader = new PropertiesReader();
-        this.wait = new WebDriverWait(driver, propertiesReader.getTimeout());
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(propertiesReader.getTimeout()));
     }
+
 
 
     loginPageFactory login;
@@ -31,7 +36,7 @@ public class PageFactoryLoginStepsDefinition {
 
     @Given("User is on login page")
     public void user_is_on_login_page() {
-        login = new loginPageFactory(driver);
+        login = new loginPageFactory(driver,wait);
         login.clickSignin();
 
     }
